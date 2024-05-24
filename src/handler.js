@@ -8,7 +8,9 @@ const addNoteHandler = (request, h) => {
   const createdAt = new Date().toISOString();
   const updatedAt = createdAt;
 
-  const newNote = { title, tags, body, id, createdAt, updatedAt };
+  const newNote = {
+    title, tags, body, id, createdAt, updatedAt,
+  };
 
   notes.push(newNote);
 
@@ -111,13 +113,6 @@ const deleteNoteByIdHandler = (request, h) => {
     response.code(200);
     return response;
   }
-
-  const response = h.response({
-    status: "fail",
-    message: "Catatan gagal dihapus. Id gagal ditemukan.",
-  });
-  response.code(404);
-  return response;
 };
 
 module.exports = {
