@@ -1,5 +1,7 @@
-const { nanoid } = require('nanoid');
-const notes = require('./notes');
+/* eslint-disable import/extensions */
+/* eslint-disable object-curly-newline */
+import { nanoid } from 'nanoid';
+import notes from './notes.js';
 
 const addNoteHandler = (request, h) => {
   const { title, tags, body } = request.payload;
@@ -126,7 +128,7 @@ const deleteNoteByIdHandler = (request, h) => {
   return response;
 };
 
-module.exports = {
+export {
   addNoteHandler,
   getAllNotesHandler,
   getNoteByIdHandler,
