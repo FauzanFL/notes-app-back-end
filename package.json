@@ -2,7 +2,7 @@
   "name": "notes-app-back-end",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/server.js",
   "type": "module",
   "scripts": {
     "start-prod": "NODE_ENV=production node ./src/server.js",
@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^4.3.7",
+    "chai": "^5.1.1",
     "chai-http": "^5.0.0",
     "eslint": "^7.28.0",
     "eslint-config-airbnb-base": "^14.2.1",
